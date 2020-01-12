@@ -12,13 +12,6 @@ class Solver:
 
         print(self.board)
 
-        '''# this is for debug
-        self.fp = 'C:\\Users\\ARYAN\\Desktop\\TESTSUDOKU.txt'
-        self.f = open(self.fp, 'w+')
-        self.f.write('Let begin\n')
-        self.f.close()
-        # debug code end'''
-
         self.filled_list = []
         self.filled_already(self.board)
         start_time = dtt.now()
@@ -60,17 +53,6 @@ class Solver:
             return [0, y + 1]
 
     def backtracking(self, x, y):
-
-        '''# debug code start
-        f = open(self.fp, 'a+')
-        f.write('Array till ['+ str(x) + ',' + str(y) + ']:\n')
-        for i in range(0, self.board.shape[0]):
-            for j in range(0, self.board.shape[1]):
-                f.write(str(self.board[i][j]))
-                f.write("\t")
-            f.write("\n")
-        f.close()
-        # debug code end'''
 
         if y > 8:
             print(self.board)
